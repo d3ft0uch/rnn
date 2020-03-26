@@ -2,7 +2,7 @@
 # CONFIG -----------------------------------------------------------------------------------------------------------#
 
 # Here are the input and output data paths (Note: you can override wav_path in preprocess.py)
-wav_path = '/path/to/wav_files/'
+wav_path = 'set/'
 data_path = 'data/'
 
 # model ids are separate - that way you can use a new tts with an old wavernn and vice versa
@@ -23,7 +23,7 @@ fft_bins = n_fft // 2 + 1
 num_mels = 80
 hop_length = 275                    # 12.5ms - in line with Tacotron 2 paper
 win_length = 1100                   # 50ms - same reason as above
-fmin = 40
+fmin = 90
 min_level_db = -100
 ref_level_db = 20
 bits = 9                            # bit depth of signal
@@ -73,7 +73,7 @@ tts_lstm_dims = 512
 tts_postnet_K = 8
 tts_num_highways = 4
 tts_dropout = 0.5
-tts_cleaner_names = ['english_cleaners']
+tts_cleaner_names = ['basic_cleaners']
 tts_stop_threshold = -3.4           # Value below which audio generation ends.
                                     # For example, for a range of [-4, 4], this
                                     # will terminate the sequence at the first
